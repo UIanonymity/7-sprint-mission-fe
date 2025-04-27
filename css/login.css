@@ -49,26 +49,6 @@ main {
 
 }
 
-.bars{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    color: #1F2937;
-    font-family: Pretendard;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-align: left;
-}
-
 .inputbar {
     display: flex;
     width: 640px;
@@ -91,6 +71,40 @@ main {
     outline: none; /* 기본 outline 제거 */
     border: 2px solid #3692FF; /* 포커스 시 테두리 적용 */
 } 
+
+.inputbox {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.bars{
+    position: relative;
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.bars .text {
+    display: flex;
+    gap: 16px;
+    color: #1F2937;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    margin: auto;
+    padding: 0px 0px 16px 0px;
+}
+
+.eyes { position:absolute;
+    transform:translateY(-50%);
+    top: 70%;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #9CA3AF;
+}
 
 .button {
     display: flex;
@@ -150,11 +164,11 @@ main {
     text-decoration-skip-ink: none;
     text-decoration-thickness: auto;
     text-underline-offset: auto;
-    text-underline-position: from-font
+
 }
 
-.signup p {
-    color: var(--Secondary-800, #1F2937);
+.login p {
+    color: #1F2937;
     /* pretendard/md-14px-medium */
     font-family: Pretendard;
     font-size: 14px;

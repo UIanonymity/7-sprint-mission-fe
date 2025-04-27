@@ -2,48 +2,66 @@
 <html lang="en">
     <head>
 
-        <mata charset="UIF-8">
-        <mata name="vieport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <title>singup</title>
 
         <link rel="stylesheet" href="css/reset.css"/>
         <link rel="stylesheet" href="css/signup.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
 
     </head>
     <body>
         <main>
             <header>
-                <a class="home" href="index.html"> <img src="imge/panda-fac.svg">
-                <h2>판다마켓</h2>
-            </a>
+                <a class="homelink" href="index.html"><img class="logoicon" src="imge/panda-fac.svg">
+                    <h2 class="logo">판다마켓</h2> </a>
             </header>
-            <div>
-                <form method="post" action="signup.html"></form>
-                <p>이메일</p>
-                <input type="email" name="email" placeholder="이메일을 입력해주세요">
-                <p>닉네임</p>
-                <input type="text" name="name" placeholder="닉네임을 입력해주세요">
-                <p>비밀번호</p>
-                <input type="password" name="password" placeholder="비밀번호를 입력해주세요">
-                <p>비밀번호 확인</p>
-                <input type="password" name="password" placeholder="비밀번호를 다시 한 번 입력해주세요">
-                <input type="submit" value="회원가입">
-            </div>
-    
-            <div>
-                <p>간편 로그인하기</p>
-                <div>
-                    <a href="https://www.google.com" type="button" target="_blank" rel="noopener noreferrer"> <img src="imge/loginGo.svg"> </a>
-                    <a href="https://www.kakaocorp.com/page" type="button" target="_blank" rel="noopener noreferrer"> <img src="imge/loginKO.svg"> </a>
+
+            <section class="container">
+                <div class="inputbox">
+                    <form method="post" action="signup.html"></form>
+                        <div class="bars">
+                            <div class="text"><p>이메일</p></div>
+                          <label for="email"></label>
+                        <input class="inputbar" type="email" id="email" placeholder="이메일을 입력해주세요">
+                        </div>
+                        <div class="bars">
+                            <div class="text"><p>닉네임</p></div>
+                          <label for="nickname"></label>
+                          <input class="inputbar" type="text" id="nickname" placeholder="닉네임을 입력해주세요">
+                        </div>
+                        <div class="bars">
+                            <div class="text"><p>비밀번호</p></div>
+                            <label for="password"></label>
+                            <input class="inputbar" type="password" id="password" placeholder="비밀번호를 입력해주세요">
+                            <div class="eyes" id="togglePassword1"><i class="fas fa-eye"></i></div>
+                        </div>
+                        <div class="bars">
+                            <div class="text"><p>비밀번호 확인</p></div>
+                            <label for="password2"></label>
+                            <input class="inputbar" type="password" id="password2" placeholder="비밀번호를 다시 한 번 입력해주세요">
+                            <div class="eyes" id="togglePassword2"><i class="fas fa-eye"></i></div>
+                        </div>
+                        <input class="button" type="submit" value="회원가입">
+                    </div>
+                <div class="loginbox">
+                    <div class="box">
+                        <p>간편 로그인하기</p>
+                        <div class="icon">
+                            <a href="https://www.google.com" type="button" target="_blank" rel="noopener noreferrer"> <img src="imge/loginGo.svg"> </a>
+                            <a href="https://www.kakaocorp.com/page" type="button" target="_blank" rel="noopener noreferrer"> <img src="imge/loginKO.svg"> </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-    
-            <div>
-                <p>이미 회원이신가요?</p>
-                <a href="login.html">로그인</a>
-            </div>
-    
+                    <div class="login">
+                        <p>이미 회원이신가요?</p>
+                        <a href="login.html">로그인</a>
+                    </div>
+                </div>
         </main>
+        <script src="script.js"></script>
         
     </body>
+</html>
