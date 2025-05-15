@@ -12,44 +12,61 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
 
     </head>
-    <body>
+    <body class="signup-page">
         <main>
             <header>
                 <a class="homelink" href="index.html"><img class="logoicon" src="imge/panda-fac.svg">
-                    <h2 class="logo">판다마켓</h2> </a>
+                <h2 class="logo">판다마켓</h2> </a>
             </header>
 
             <section class="container">
-                <div class="inputbox">
-                    <form method="post" action="signup.html"></form>
+                <form method="post" action="signup.html" class="form-gap">
+                    <!-- 전체 폼 시작 -->
                         <div class="bars">
+                            <!-- 이메일 입력 영역 -->
                             <div class="text"><p>이메일</p></div>
-                          <label for="email"></label>
-                        <input class="inputbar" type="email" id="email" placeholder="이메일을 입력해주세요">
+                            <label for="email"></label>
+                            <input class="inputbar" type="email" id="email" placeholder="이메일을 입력해주세요">
+                            <div class="error-message" id="email-error" style="display: none;"></div>
                         </div>
                         <div class="bars">
+                            <!-- 닉네임 입력 영역 -->
                             <div class="text"><p>닉네임</p></div>
-                          <label for="nickname"></label>
-                          <input class="inputbar" type="text" id="nickname" placeholder="닉네임을 입력해주세요">
+                            <label for="nickname"></label>
+                            <input class="inputbar" type="text" id="nickname" placeholder="닉네임을 입력해주세요">
+                            <div class="error-message" id="nickname-error" style="display: none;"></div>
                         </div>
                         <div class="bars">
+                            <!-- 비밀번호 입력 영역 -->
                             <div class="text"><p>비밀번호</p></div>
-                            <label for="password"></label>
-                            <input class="inputbar" type="password" id="password" placeholder="비밀번호를 입력해주세요">
-                            <div class="eyes" id="togglePassword1" onclick="togglePasswordVisibility('togglePassword1', 'password')">
-                              <i class="fas fa-eye"></i>
+                            <div class="relative">
+                                <label for="password"></label>
+                                <input class="inputbar" type="password" id="password" placeholder="비밀번호를 입력해주세요">
+                                <div class="eyes" id="togglePassword1" onclick="togglePasswordVisibility('togglePassword1', 'password')">
+                                    <i class="fas fa-eye"></i>
+                                </div>
                             </div>
-                          </div>
-                          <div class="bars">
+                            <div class="error-message" id="password-error" style="display: none;"></div>
+                        </div>
+                        <div class="bars">
+                            <!-- 비밀번호 입력 확인 영역 -->
                             <div class="text"><p>비밀번호 확인</p></div>
-                            <label for="password2"></label>
-                            <input class="inputbar" type="password" id="password2" placeholder="비밀번호를 다시 한 번 입력해주세요">
-                            <div class="eyes" id="togglePassword2" onclick="togglePasswordVisibility('togglePassword2', 'password2')">
-                              <i class="fas fa-eye"></i>
+                            <div class="relative">
+                                <label for="confirm-password"></label>
+                                <input class="inputbar" type="password" id="confirm-password" placeholder="비밀번호를 다시 한 번 입력해주세요">
+                                <div class="eyes" id="toggleconfirm-password" onclick="togglePasswordVisibility('toggleconfirm-password', 'confirm-password')">
+                                <i class="fas fa-eye"></i>
+                                </div>
                             </div>
-                          </div>
-                        <input class="button" type="submit" value="회원가입">
-                    </div>
+                            <div class="error-message" id="confirm-password-error" style="display: none;"></div>
+                        </div>
+                        <div class="bars">
+                            <!-- 회원가입 버튼 -->
+                            <input class="button" type="submit" value="회원가입" id="signup-btn">
+                        </div> 
+                </form>
+                <!-- 전체 폼 끝 -->
+            </section>
                 <div class="loginbox">
                     <div class="box">
                         <p>간편 로그인하기</p>
@@ -66,6 +83,7 @@
                 </div>
         </main>
         <script src="script.js" defer></script>
+        <script src="eyes.js" defer></script>
         
     </body>
 </html>
