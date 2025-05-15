@@ -1,8 +1,11 @@
+/* 메인 홈 스타일 시트 */
+
 * {
     box-sizing: border-box;
     padding: 0px 200px;
     justify-content: center;
     padding: 200px;
+    white-space: nowrap;
 }
 
 @font-face {

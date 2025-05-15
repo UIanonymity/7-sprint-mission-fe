@@ -36,14 +36,18 @@
                             <div class="text"><p>비밀번호</p></div>
                             <label for="password"></label>
                             <input class="inputbar" type="password" id="password" placeholder="비밀번호를 입력해주세요">
-                            <div class="eyes" id="togglePassword1"><i class="fas fa-eye"></i></div>
-                        </div>
-                        <div class="bars">
+                            <div class="eyes" id="togglePassword1" onclick="togglePasswordVisibility('togglePassword1', 'password')">
+                              <i class="fas fa-eye"></i>
+                            </div>
+                          </div>
+                          <div class="bars">
                             <div class="text"><p>비밀번호 확인</p></div>
                             <label for="password2"></label>
                             <input class="inputbar" type="password" id="password2" placeholder="비밀번호를 다시 한 번 입력해주세요">
-                            <div class="eyes" id="togglePassword2"><i class="fas fa-eye"></i></div>
-                        </div>
+                            <div class="eyes" id="togglePassword2" onclick="togglePasswordVisibility('togglePassword2', 'password2')">
+                              <i class="fas fa-eye"></i>
+                            </div>
+                          </div>
                         <input class="button" type="submit" value="회원가입">
                     </div>
                 <div class="loginbox">
@@ -61,7 +65,7 @@
                     </div>
                 </div>
         </main>
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
         
     </body>
 </html>

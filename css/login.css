@@ -1,14 +1,16 @@
+/* 로그인 페이지 스타일 시트 */
+
 * {
     box-sizing: border-box;
     padding: 0px 200px;
     justify-self: center;
+    white-space: nowrap;
 }
 
 main {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    display: flex;
     width: 1920px;
     padding: 227px 640px;
     justify-content: center;
@@ -40,28 +42,17 @@ main {
     flex-shrink: 0;
 }
 
-.container {
-    display: flex;
-    width: 640px;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-
-}
-
 .inputbar {
-    display: flex;
+    flex: 1;
     width: 640px;
     height: 56px;
     padding: 16px 24px;
+    padding-right: 40px;
     align-items: center;
     gap: 10px;
     border-radius: 12px;
     background: #F3F4F6;
     color: #9CA3AF;
-    font-family: Pretendard;
-    font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 26px; /* 162.5% */
     border: none; /* 기본 테두리 제거 */
@@ -78,10 +69,20 @@ main {
     flex-direction: column;
 }
 
+.inputbar.error {
+    border: 2px solid red; /* 에러 상태 테두리 색상 */
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    justify-self: flex-start;
+}
+
 .bars{
     position: relative;
     display: inline-block;
-    justify-content: space-between;
 }
 
 .bars .text {
@@ -97,11 +98,12 @@ main {
     padding: 0px 0px 16px 0px;
 }
 
-.eyes { position:absolute;
-    transform:translateY(-50%);
-    top: 70%;
-    right: 10px;
-    cursor: pointer;
+.bars .eyes { 
+    position: absolute;
+    right: 10px; /* 오른쪽 여백 */
+    top: 50%;
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
+    cursor: pointer; /* 클릭 가능 표시 */
     font-size: 16px;
     color: #9CA3AF;
 }
@@ -117,6 +119,7 @@ main {
     text-align: center;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     font-family: Pretendard;
     font-size: 20px;
     font-style: normal;
@@ -175,4 +178,12 @@ main {
     font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 171.429% */
+}
+
+.form-gap {
+    width: 640px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    gap: 24px;
 }

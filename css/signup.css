@@ -1,7 +1,10 @@
+/* 회원가입 페이지 스타일 시트 */
+
 * {
     box-sizing: border-box;
     padding: 0px 200px;
     justify-self: center;
+    white-space: nowrap;
 }
 
 main {
@@ -144,6 +147,8 @@ main {
     justify-content: space-between;
     align-items: center;
 }
+
+/* 하단 간편 로그인 창 */
 
 .login {
     display: flex;
