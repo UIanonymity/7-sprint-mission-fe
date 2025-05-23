@@ -5,10 +5,30 @@
     <head>
         <meta charset="UTF-8">
         <title>테스트 페이지</title>
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     
     <body>
-        <h1>기본세팅 복붙용</h1>
-    </body>
+        <header class="headline"> <h1>게시글 보기</h1> </header>
+        <main class="ArticleContainer">
+            <!-- 기사 내용 표시 확인 -->
+            <article class="content">
+                <h2 class="subtitle"> 게시글 내용 </h2>
+                <div id="article-box"> 
+                    <P>아래 게시글을 클릭해 내용을 확인해보세요</P> 
+                </div>
+            </article>
+            <!-- 그 아래 나머지 리스트 표기 -->
+            <section class="list">
+                <h2 class="subtitle">다른 게시글들</h2>
+                <div id="article-list"></div>
+            </section> 
+        </main>
+       
+        
+
+    <script src="../script/Article.js"></script>
+    <script src="../script/Product.js"></script>
+    <script src="../script/main.js"></script>
 
 </html>
